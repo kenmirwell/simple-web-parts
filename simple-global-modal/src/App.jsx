@@ -36,7 +36,6 @@ function App() {
             <ThirdPage/>
           }
       </div>
-      <Modal/>
     </div>
   )
 }

@@ -1,10 +1,23 @@
 import React from 'react'
+import Modal from '../Modal/Modal'
+import { useState } from "react"
 
 const SecondPage = () => {
+    const [status, setStatus] = useState(false)
+
+    const onClick = () => {
+        setStatus(!status)
+    }
     return (
-        <div>
-            <div className="cursor-pointer">Second</div>
-        </div>
+        <>
+            <div onClick={onClick}>
+                <div className="cursor-pointer">Second</div>
+            </div>
+            <Modal 
+                status={status}
+                onClick={onClick}
+            />
+        </>
     )
 }
 
